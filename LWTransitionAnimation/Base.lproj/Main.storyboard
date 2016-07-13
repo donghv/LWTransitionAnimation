@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LWMainViewController" customModule="LWTransitionAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aXA-cG-r3M">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageCell" id="9L9-1P-18c">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9L9-1P-18c" id="peB-CB-tJb">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WKn-BM-Vuk">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="WKn-BM-Vuk" secondAttribute="trailing" id="CAK-zK-4tN"/>
+                                                <constraint firstAttribute="bottom" secondItem="WKn-BM-Vuk" secondAttribute="bottom" id="FGP-iX-K9M"/>
+                                                <constraint firstItem="WKn-BM-Vuk" firstAttribute="leading" secondItem="peB-CB-tJb" secondAttribute="leading" id="Tdf-gs-krk"/>
+                                                <constraint firstItem="WKn-BM-Vuk" firstAttribute="top" secondItem="peB-CB-tJb" secondAttribute="top" id="V6I-2N-fTY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="H2k-dM-cTt"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Jw2-TH-LbH"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aXA-cG-r3M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Izn-el-BQN"/>
+                            <constraint firstItem="aXA-cG-r3M" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Q5x-fT-0ur"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aXA-cG-r3M" secondAttribute="bottom" id="RES-Mu-VT5"/>
+                            <constraint firstAttribute="trailing" secondItem="aXA-cG-r3M" secondAttribute="trailing" id="WmK-6N-yOX"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="dN8-3Y-n0r" kind="presentation" identifier="PushDetail" id="Rvl-34-uRF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="313"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="1mp-yq-weU">
+            <objects>
+                <viewController id="dN8-3Y-n0r" customClass="LWDetailViewController" customModule="LWTransitionAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4cp-6V-WVK"/>
+                        <viewControllerLayoutGuide type="bottom" id="VqD-Gf-Nls"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kEX-Go-dOs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image02" translatesAutoresizingMaskIntoConstraints="NO" id="UyW-Hr-x0x">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wj1-f5-SU4">
+                                <rect key="frame" x="285" y="25" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="GWm-FE-Ruu"/>
+                                    <constraint firstAttribute="height" constant="30" id="HVl-Cz-Qvd"/>
+                                </constraints>
+                                <state key="normal" image="delete_icon"/>
+                                <connections>
+                                    <action selector="handleCloseButton" destination="dN8-3Y-n0r" eventType="touchUpInside" id="XmK-GH-IHf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VqD-Gf-Nls" firstAttribute="top" secondItem="UyW-Hr-x0x" secondAttribute="bottom" id="Z3L-P6-FSG"/>
+                            <constraint firstAttribute="trailing" secondItem="wj1-f5-SU4" secondAttribute="trailing" constant="5" id="dML-kA-xaj"/>
+                            <constraint firstItem="UyW-Hr-x0x" firstAttribute="leading" secondItem="kEX-Go-dOs" secondAttribute="leading" id="gL0-uM-5he"/>
+                            <constraint firstItem="UyW-Hr-x0x" firstAttribute="top" secondItem="kEX-Go-dOs" secondAttribute="top" id="i9A-mv-trQ"/>
+                            <constraint firstItem="wj1-f5-SU4" firstAttribute="top" secondItem="4cp-6V-WVK" secondAttribute="bottom" constant="5" id="kmj-GD-J63"/>
+                            <constraint firstAttribute="trailing" secondItem="UyW-Hr-x0x" secondAttribute="trailing" id="xy1-yB-Io7"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="imageView" destination="UyW-Hr-x0x" id="NFb-cg-dVN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hrz-xc-WWB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="877" y="313"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="delete_icon" width="256" height="256"/>
+        <image name="image02" width="237" height="355"/>
+    </resources>
+</document>
